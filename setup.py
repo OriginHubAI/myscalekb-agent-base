@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="myscalekb-agent-base",
-    version="0.1.0",
+    version="0.1.1",
     author="jiachengs",
     author_email="jiachengs@myscale.com",
     description="Base classes for MyScaleKB Agent APP",
