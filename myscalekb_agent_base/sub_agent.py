@@ -142,12 +142,12 @@ class SubAgentRegistry:
         cls._agents[agent_class.__name__] = agent_class
 
     @classmethod
-    def get_enabled_agents(cls, enabled_agent_names: List[str]) -> List[Type[SubAgent]]:
+    def filter_enabled_agents(cls, disabled_agent_names: List[str]) -> List[Type[SubAgent]]:
         """Get enabled agents by class name"""
         enabled_agents = []
 
         for name, agent_class in cls._agents.items():
-            if name in enabled_agent_names:
+            if name not in disabled_agent_names:
                 enabled_agents.append(agent_class)
 
         return enabled_agents
