@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name="myscalekb-agent-base",
-    version="0.1.2",
+    version="0.1.3",
     author="jiachengs",
     author_email="jiachengs@myscale.com",
     description="Base classes for MyScaleKB Agent APP",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/myscale/myscalekb-agent-base",
-    packages=find_packages(include=["myscalekb_agent_base"]),
+    packages=find_packages(include=["myscalekb_agent_base", "myscalekb_agent_base.*"]),
     package_data={},
     python_requires=">=3.12",
     install_requires=[
