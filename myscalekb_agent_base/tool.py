@@ -4,7 +4,7 @@ from typing import Type
 from langchain_core.tools import StructuredTool
 from pydantic import BaseModel
 
-from myscalekb_agent.base.retriever import Retriever
+from myscalekb_agent_base.retriever import Retriever
 
 
 class BaseTool(ABC):

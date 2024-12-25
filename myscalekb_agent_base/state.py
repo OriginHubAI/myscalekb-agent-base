@@ -5,8 +5,8 @@ from langchain.agents.output_parsers.tools import ToolAgentAction
 from langchain_core.agents import AgentAction, AgentFinish
 from langchain_core.messages import BaseMessage
 
-from myscalekb_agent.base.schemas.agent_metadata import AgentMetadata
-from myscalekb_agent.base.schemas.message import UserMessage
+from myscalekb_agent_base.schemas.agent_metadata import AgentMetadata
+from myscalekb_agent_base.schemas.message import UserMessage
 
 
 class AgentState(TypedDict):

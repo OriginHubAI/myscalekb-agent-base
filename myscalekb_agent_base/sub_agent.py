@@ -12,10 +12,10 @@ from langchain_core.tools import StructuredTool
 from langgraph.graph.graph import CompiledGraph
 from pydantic import BaseModel
 
-from myscalekb_agent.base.graph_builder import GraphBuilder
-from myscalekb_agent.base.schemas.knowledge_base import KnowledgeScope
-from myscalekb_agent.base.state import AgentState
-from myscalekb_agent.base.utils import AutoDiscover
+from myscalekb_agent_base.graph_builder import GraphBuilder
+from myscalekb_agent_base.schemas.knowledge_base import KnowledgeScope
+from myscalekb_agent_base.state import AgentState
+from myscalekb_agent_base.utils import AutoDiscover
 
 logger = logging.getLogger(__name__)
 

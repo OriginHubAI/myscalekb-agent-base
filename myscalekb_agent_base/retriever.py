@@ -4,7 +4,7 @@ from typing import List, Optional, Callable, Any
 from clickhouse_connect.driver import Client
 from langchain_core.embeddings.embeddings import Embeddings
 
-from myscalekb_agent.base.schemas.knowledge_base import KnowledgeScope
+from myscalekb_agent_base.schemas.knowledge_base import KnowledgeScope
 
 
 class Retriever(ABC):

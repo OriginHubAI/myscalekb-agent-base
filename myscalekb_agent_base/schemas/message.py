@@ -5,7 +5,7 @@ from typing import Any, Annotated
 
 from pydantic import Field, BaseModel
 
-from myscalekb_agent.base.schemas.agent_metadata import AgentMetadata
+from myscalekb_agent_base.schemas.agent_metadata import AgentMetadata
 
 
 class MessageRoles(str, Enum):

@@ -7,7 +7,7 @@ from typing import TypedDict
 from langchain_core.runnables.base import RunnableLike
 from langgraph.graph import StateGraph
 
-from myscalekb_agent.base.schemas.agent_metadata import AgentMetadata
+from myscalekb_agent_base.schemas.agent_metadata import AgentMetadata
 
 logger = logging.getLogger(__name__)
 

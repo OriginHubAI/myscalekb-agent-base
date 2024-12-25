@@ -9,7 +9,7 @@ from clickhouse_connect.driver import Client
 from clickhouse_connect.driver.exceptions import OperationalError
 from pydantic import BaseModel, Field
 
-from myscalekb_agent.base.schemas.knowledge_base import KnowledgeScope
+from myscalekb_agent_base.schemas.knowledge_base import KnowledgeScope
 
 logger = logging.getLogger(__name__)
 
