@@ -1,0 +1,15 @@
+repos:
+  - repo: local
+    hooks:
+      - id: black
+        name: black-formatting
+        entry: black --line-length 120
+        types: [ python ]
+        exclude: ^main.py
+        language: system
+      - id: pylint
+        name: pylint
+        entry: pylint
+        types: [ python ]
+        exclude: ^main.py
+        language: system

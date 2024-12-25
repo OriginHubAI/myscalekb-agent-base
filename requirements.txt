@@ -2,8 +2,12 @@
 twine
 setuptools
 wheel
+pre-commit
+black
 
 # app required
+pydantic~=2.8.2
+
 # langchain family
 langchain==0.3.2
 langchain-openai==0.2.2
