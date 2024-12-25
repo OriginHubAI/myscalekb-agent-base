@@ -3,6 +3,8 @@
 MyScaleKB Agent Base 是 MyScaleKB Agent 低代码二次开发框架的基类 Package. 它开源了框架中部分核心基类的具体实现，并以开源
 Package 的方式方便 Developer 进行集成和二次开发。
 
+阅读本文档以了解 MyScaleKB Agent Base 中的基础概念。阅读 [MySaleKB Agent Plugin 使用指南](!https://github.com/myscale/myscalekb-agent-plugin/blob/main/README.md) 以了解如何开发并集成部署 MyScaleKB Agent.
+
 ## MyScaleKB Agent 低代码二次开发框架
 
 ### 介绍
@@ -27,6 +29,8 @@ Graph 是 Agent Workflow 的一种直观表现形式，例如一个最简单的 
 每一个步骤都由一个 node 去执行具体的逻辑，步骤的连接则用 edge 来控制。
 @node / @edge 是 MyScaleKB Agent 提供的一种图构建的便捷方式，通过 Python 装饰器的特性，可以快速地构建一个 Graph，例如上面提到的简化
 RAG 流程：
+
+```python
 class SimpleRag(SubAgent):
 
     @node
@@ -43,6 +47,7 @@ class SimpleRag(SubAgent):
     @edge(target_node="__end__")
     async def summarize(self, data):
         """summarize contexts and answer user input"""
+```
 
 除了 @node / @edge 之外，MyScaleKB Agent 还提供了 @conditional_edge 来进行有条件的路径控制。
 
@@ -171,6 +176,7 @@ class Prompt(ABC):
         with_agent_scratchpad: bool = False,
     ) -> ChatPromptTemplate:
 
+
 class SimpleRagPrompt(Prompt):
 
     def understand_prompt_template(self):
@@ -204,9 +210,11 @@ And recommend more suitable questions to users based on the questions and contex
 上述 SimpleRag 代码中的 Prompt 仅用于示例。
 
 ### Tool
+
 Tool 由 LLM 来选择调用并生成调用参数，并由 Agent 来处理 Tool 的执行结果。在上文的 SimpleRag 中，retrieve 步骤其实就是一个
 Tool 的执行，LLM 会基于用户问题为 retrieve 步骤生成恰当的 query 参数。
 在 MyScaleKB Agent 的框架中，开发者可以基于 BaseTool 定义任意数量的 Tool：
+
 ```python
 class BaseTool(ABC):
     """Base class for all tools"""
