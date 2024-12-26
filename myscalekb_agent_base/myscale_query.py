@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import os
 import re
@@ -68,6 +69,15 @@ class MyScaleQuery:
                 time.sleep(0.1)
 
         raise Exception(f"Failed to query myscale after {retries} attempts.")
+
+    @staticmethod
+    async def aquery(client: Client, q_str: str, timeout: int = 30, run_command: bool = False):
+
+        def _query():
+            return MyScaleQuery.query(client, q_str, timeout, run_command)
+
+        loop = asyncio.get_running_loop()
+        return await loop.run_in_executor(None, _query)
 
     @staticmethod
     def gen_where_str(knowledge_scopes: List[KnowledgeScope], skip_only_kb: bool = False) -> str:
