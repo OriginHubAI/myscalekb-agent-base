@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="myscalekb-agent-base",
+    name="originhub-myscalekb-agent-base",
     version="0.1.8",
     author="jiachengs",
     author_email="jiachengs@myscale.com",
@@ -16,9 +16,9 @@ setup(
         # app required
         "pydantic~=2.8.2",
         # langchain family
-        "langchain==0.3.2",
-        "langchain-openai==0.2.2",
-        "langchain-community==0.3.1",
+        "langchain==0.3.19",
+        "langchain-openai==0.3.7",
+        "langchain-community==0.3.18",
         "langgraph==0.2.35",
         # others
         "nanoid~=2.0.0",
