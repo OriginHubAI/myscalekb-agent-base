@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 setup(
     name="originhub-myscalekb-agent-base",
     version="0.1.9",
-    author="jiachengs",
-    author_email="jiachengs@myscale.com",
+    author="louh",
+    author_email="louh@originhub.tech",
     description="Base classes for MyScaleKB Agent APP",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
